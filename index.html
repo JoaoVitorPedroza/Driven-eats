@@ -5,67 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <link rel="reset" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
     <title>Driven eats</title>
 </head>
 <body>
 <header>
-        <h1>Driven Eats</h1>
-        <h3>sua comida em 6 minutos</h3>
+        <h1>DrivenEats</h1>
+        <h3>Sua comida em 6 minutos</h3>
 </header>
 <section>
+    <h2>Primeiro seu prato</h2>
     <div class="prato">
-        <h2>Primeiro seu prato</h2>
-        <div class="opcao1">
-            <img src="imagem 1.jpg" class="img1">
-            <div class="desc1"><p>PF: com carne moida</p></div>
-            <div class="d"><p>feijão, arroz, batata frita, salada, carne moida </p></div>
-            <div class="preco">15.90</div> 
+        <div class="opcao1" id="op1" onmouseover="escolher()">
+            <img src="imagens a serem trocadas/pf_carne.jpg" class="img1">
+            <h4>PF de carne do João</h4>
+            <p class="desc1">Arroz, Feijão, carne e Batata</p>
+            <p class="preco">14,99</p>
         </div>
-        <div class="opcao2">
-            <img src="prato 2.avif" class="img1">
-            <div class="desc1"><p>PF: com lasanha</p></div>
-            <div class="d"><p>feijão, arroz, batata frita, salada, lasanha</p></div>
-            <div class="preco">17.90</div> 
-            
+        <div class="opcao2" id="op2" onmouseover="escolher()">
+            <img src="imagens a serem trocadas/pf_frango.jpg" class="img2">
+            <h4>PF de Frango do João</h4>
+            <p class="desc2">Arroz, Feijão, Frango e Farofa</p>
+            <p class="preco">13,99</p>
+        </div>
+        <div class="opcao3" id="op3" onmouseover="escolher()">
+            <img src="imagens a serem trocadas/pf_calabresa.png" class="img3">
+            <h4>PF do calma calabreso</h4>
+            <p class="desc3">Arroz, Feijão, Calabresa e Batata</p>
+            <p class="preco">11,99</p>
         </div>
     </div>
+    <!--
     <div class="bebida">
         <h2>Agora sua Bebida</h2>
-        <div class="opcao3">
+        <div class="opcao3" id="op3" onmouseover="escolher()">
             <img src="bebida 1.jpeg" class="img3">
             <div class="desc3"><p>Fanta Laranja</p></div>
             <div class="L"><p>Uma bebida refrescante, sabor laranja 300ml</p></div>
             <div class="preco">4,10</div>
+            <br>
+            <div class="sacola"><button  class="escolha" id="s3" onclick="adicionar()">Adicionar ao carrinho</button></div>
         </div>
-        <div class="opcao4">
+        <div class="opcao4" id="op4" onmouseover="escolher()">
             <img src="bebida 3.jpg" class="img4">
             <div class="desc3_5"><p>Dell valle Maracuja</p></div>
             <div class="L"><p>Uma bebida refrescante, sabor Maracuja 300ml</p></div>
             <div class="preco">5,50</div>
+            <br>
+            <div class="sacola"><button  class="escolha" id="s4" onclick="adicionar()">Adicionar ao carrinho</button></div>
         </div>
     </div>
-    <div class="sobremesa">
+    <div class="sobremesa"  onmouseover="escolher()">
         <h2>Agora sua Sobremesa</h2>
-        <div class="opcao5">
+        <div class="opcao5" id="op5">
             <img src="sobremesa 1.jpg" class="img5">
             <div class="desc4"><p>bolo de chocolate</p></div>
             <div class="L"><p>uma fatia deliciosa de bolo de chocolate 350gramas</p></div>
             <div class="preco">5,50</div>
+            <br>
+            <div class="sacola"><button  class="escolha" id="s5" onclick="adicionar()">Adicionar ao carrinho</button></div>
         </div>
-        <div class="opcao6">
+        <div class="opcao6" id="op6" onclick="escolher()">
             <img src="sobremesa 2.jpg" class="img6">
             <div class="desc5"><p>pudim</p></div>
             <div class="L"><p>uma fatia deliciosa de pudim 350gramas</p></div>
             <div class="preco">4,50</div>
+            <br>
+            <div class="sacola"><button  class="escolha" id="s6" onclick="adicionar()">Adicionar ao carrinho</button></div>
         </div>
     </div>
+-->
+<!--Fim das opções, vamos para o sistema de carrinho-->
+<!--
+<div class="carrinho">
 
-<!--Fim das opções, vamos para o sistema de pagamento-->
-<div class="pagamento">
-    <h2>Selecione os 3 itens para fechar o pedido</h2>
+<h2>carrinho</h2>
+<img class="car" src="Carrinho-de-Compras.png">
+<div class="selecionado" id="selecionado">
+<p id="produto_1"></p>
+<p id="produto_2"></p>
+<p id="produto_3"></p>
 </div>
+<br>
+<br>
+<button class="botao" id="botao" onclick="comprar()">Pagar</button>
+</div>
+<div class="contatos">
+<h3>Telefone: (71)9953-1468</h3>
+<h3>Email: zippghh@gmail.com</h3>
+<h3>instagram: @Juao2057</h3>
+<h3>GitHub: https://github.com/JoaoVitorPedroza</h3>
+</div>
+-->
 </section>
-<footer>@Juao2057</footer>
 <script src="display.js"></script>
 </body>
 </html>
